@@ -1,0 +1,9 @@
+$primary-color: #5cdb95;
+
+/* make the customizations */
+$theme-colors: (
+  'primary': $primary-color,
+);
+
+/* import bootstrap to set changes */
+@import '~bootstrap/scss/bootstrap';
