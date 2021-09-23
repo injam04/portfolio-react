@@ -3,8 +3,13 @@ import { ImLinkedin } from 'react-icons/im';
 import { GoMarkGithub } from 'react-icons/go';
 import { GrInstagram } from 'react-icons/gr';
 import Avatar from '../assets/img/avatar.jpeg';
+import LightIcon from '../assets/img/light.png';
+import DarkIcon from '../assets/img/dark.png';
+import { useTheme } from '../context/ThemeContext';
 
 const Showcase = () => {
+  const { IsLight, setIsLight } = useTheme();
+
   return (
     <section className='showcase'>
       <div className='container'>
@@ -60,6 +65,12 @@ const Showcase = () => {
           </div>
         </div>
       </div>
+      <img
+        src={IsLight ? DarkIcon : LightIcon}
+        alt=''
+        className='theme-mode'
+        onClick={() => setIsLight(!IsLight)}
+      />
     </section>
   );
 };

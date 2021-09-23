@@ -39,6 +39,15 @@ ul {
   align-items: center;
   justify-content: center;
 
+  .theme-mode {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+  }
+
   .image img {
     height: 180px;
     width: 180px;
